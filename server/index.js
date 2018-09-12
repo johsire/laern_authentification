@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const express = ('express');
+const express = require('express');
 const session = require('express-session');
 const axios = require('axios');
 
