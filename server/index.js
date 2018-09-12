@@ -6,14 +6,21 @@ const axios = require('axios');
 
 const app = express();
 
+
 // Destructuring from process.env:
 let {
- SERVER_PORT
+ SERVER_PORT,
+ SECRET
 } = process.env;
 
 
 // middleware:
 app.use(express.json());
+app.use(session({
+    secret: SECRET,
+    resave: false,
+    saveUninitialized: true
+}));
 
 
 
